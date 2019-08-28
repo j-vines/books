@@ -15,7 +15,6 @@ public class Book {
 	 * @param rating, a rating object which contains a star rating out of 5 and an optional review
 	 */
 	public Book(String title, String[] author, String date_published, Rating rating) {
-		
 		this.title = title;
 		this.author = author;
 		this.date_published = date_published;

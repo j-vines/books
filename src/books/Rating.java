@@ -2,7 +2,7 @@ package books;
 
 public class Rating {
 
-	int stars;
+	int stars = 0;
 	String review;
 	static final int MAX_REVIEW_LENGTH = 150;
 	static final int MAX_STARS = 5;
@@ -23,5 +23,23 @@ public class Rating {
 	 */
 	public Rating(int stars) {
 		this.stars = stars;
+	}
+	
+	@Override
+	public String toString() {
+		
+		StringBuilder rating = new StringBuilder();
+		
+		if(stars != 0) {
+			for(int i = 0; i < this.stars; i++) {
+				rating.append("★");
+				if(i == this.stars -1) rating.append("\n\n");
+			}
+		}
+		
+		if(review != null) {
+			rating.append("Review: " + "\"" + this.review + "\"" + ("\n\n"));
+		}
+		return rating.toString();
 	}
 }
