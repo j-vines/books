@@ -9,7 +9,7 @@ import java.io.File;
  * Last updated: 8/27/19
  * 
  * Creates a "log" or series of files containing book objects that the user will be able to add
- * to and search through. Built for Mac.
+ * to and search through.
  */
 
 public class Main {
@@ -23,7 +23,7 @@ public class Main {
 		
 		String user = System.getProperty("user.name");
 		
-		File folder = new File("/Users/" + user + "/book_logs");
+		File folder = new File("/Users/" + user + "/book_logs"); //only works on Mac
 	    	if (!folder.exists()) {
 	    		if (folder.mkdir()) {
 	    			return true;
@@ -41,7 +41,7 @@ public class Main {
 		
 		/*prompt user to enter new book, or search for previously logged book*/
 		
-		//TESTING
+		//TESTING toString
 		Rating rate1 = new Rating(4, "Good stuff!");
 		Rating rate2 = new Rating(1, "This book was terrible.");
 		Rating rate3 = new Rating(0, "Literally unreadable!");
@@ -52,6 +52,13 @@ public class Main {
 		
 		System.out.println(book1);
 		System.out.println(book2);
+		
+		//TESTING book.equals()
+		
+		Book book3 = new Book("Harry Potter", new String[] {"J.K Rowling"}, "2018", rate1);
+		
+		System.out.println(book1.equals(book3));
+		System.out.println(book1.equals(book2));
 		
 	}
 

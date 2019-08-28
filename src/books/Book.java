@@ -1,5 +1,7 @@
 package books;
 
+import java.util.Arrays;
+
 public class Book {
 
 	String title;
@@ -19,6 +21,19 @@ public class Book {
 		this.author = author;
 		this.date_published = date_published;
 		this.rating = rating;
+	}
+	
+	@Override
+	public boolean equals(Object o) { 
+		if(o == this) return true;
+		if(!(o instanceof Book)) return false;
+		
+		Book b = (Book) o;
+		
+		return this.title.contentEquals(b.title) &&
+				Arrays.equals(this.author, b.author) &&
+				this.date_published.contentEquals(b.date_published) &&
+				this.rating.equals(b.rating);
 	}
 	
 	@Override

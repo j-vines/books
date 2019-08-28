@@ -26,6 +26,11 @@ public class Rating {
 	}
 	
 	@Override
+	public boolean equals(Object o) { //FINISH THIS
+		return true;
+	}
+	
+	@Override
 	public String toString() {
 		
 		StringBuilder rating = new StringBuilder();
