@@ -19,11 +19,12 @@ public class Main {
 	 * in the user's home directory.
 	 * @return true if the directory is created. Otherwise, return false.
 	 */
+	private static final String USER = System.getProperty("user.name");
+	private static final String PATH ="/Users/" + USER + "/book_logs/";
+	
 	public static boolean make_dir() {
 		
-		String user = System.getProperty("user.name");
-		
-		File folder = new File("/Users/" + user + "/book_logs"); //only works on Mac
+		File folder = new File(PATH); //only works on Mac
 	    	if (!folder.exists()) {
 	    		if (folder.mkdir()) {
 	    			return true;

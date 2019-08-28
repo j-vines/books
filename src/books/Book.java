@@ -1,9 +1,11 @@
 package books;
 
 import java.util.Arrays;
+import java.io.Serializable;
 
-public class Book {
+public class Book implements Serializable {
 
+	private static final long serialVersionUID = 1L; //Default serialVersion
 	String title;
 	String[] author;
 	String date_published;
