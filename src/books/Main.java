@@ -41,28 +41,6 @@ public class Main {
 		
 		/*prompt user to enter new book, or search for previously logged book*/
 		
-		//TESTING toString
-		Rating rate1 = new Rating(4, "Good stuff!");
-		Rating rate2 = new Rating(1, "This book was terrible.");
-		Rating rate3 = new Rating(0, "Literally unreadable!");
-		Rating rate4 = new Rating(3);
-		
-		Book book1 = new Book("Harry Potter", new String[] {"J.K Rowling"}, "2018", rate1);
-		Book book2 = new Book("The Bible", new String[] {"Guy Ritchie", "Steve McQueen", "Joseph Gordon Levitt"}, "1994", rate3);
-		
-		System.out.println(book1);
-		System.out.println(book2);
-		
-		//TESTING book.equals()
-		
-		Book book3 = new Book("Harry Potter", new String[] {"J.K Rowling"}, "2018", rate1);
-		
-		System.out.println(book1.equals(book3)); //true
-		System.out.println(book1.equals(book2)); //false
-		System.out.println(book2.equals(book2)); //true
-		System.out.println(rate1.equals(rate2)); //false
-		System.out.println(rate2.equals(rate2)); //true
-		System.out.println(book1.equals(rate2)); //false
 		
 	}
 
