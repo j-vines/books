@@ -23,6 +23,38 @@ public class Book {
 		this.rating = rating;
 	}
 	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String[] getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String[] author) {
+		this.author = author;
+	}
+
+	public String getDate_published() {
+		return date_published;
+	}
+
+	public void setDate_published(String date_published) {
+		this.date_published = date_published;
+	}
+
+	public Rating getRating() {
+		return rating;
+	}
+
+	public void setRating(Rating rating) {
+		this.rating = rating;
+	}
+
 	@Override
 	public boolean equals(Object o) { 
 		if(o == this) return true;

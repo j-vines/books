@@ -25,9 +25,31 @@ public class Rating {
 		this.stars = stars;
 	}
 	
+	public int getStars() {
+		return stars;
+	}
+
+	public void setStars(int stars) {
+		this.stars = stars;
+	}
+
+	public String getReview() {
+		return review;
+	}
+
+	public void setReview(String review) {
+		this.review = review;
+	}
+
 	@Override
-	public boolean equals(Object o) { //FINISH THIS
-		return true;
+	public boolean equals(Object o) {
+		if(o == this) return true;
+		if(!(o instanceof Book)) return false;
+		
+		Rating r = (Rating) o;
+		
+		return this.stars == r.stars &&
+				this.review.contentEquals(r.review);
 	}
 	
 	@Override

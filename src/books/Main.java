@@ -57,8 +57,12 @@ public class Main {
 		
 		Book book3 = new Book("Harry Potter", new String[] {"J.K Rowling"}, "2018", rate1);
 		
-		System.out.println(book1.equals(book3));
-		System.out.println(book1.equals(book2));
+		System.out.println(book1.equals(book3)); //true
+		System.out.println(book1.equals(book2)); //false
+		System.out.println(book2.equals(book2)); //true
+		System.out.println(rate1.equals(rate2)); //false
+		System.out.println(rate2.equals(rate2)); //true
+		System.out.println(book1.equals(rate2)); //false
 		
 	}
 
