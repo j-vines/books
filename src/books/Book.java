@@ -21,5 +21,34 @@ public class Book {
 		this.rating = rating;
 	}
 	
+	@Override
+	public String toString() {
+		
+		StringBuilder book = new StringBuilder();
+		
+		//title
+		book.append(title + "\n");
+		
+		//author(s)
+		if(this.author.length > 1) {
+			book.append("Authors: ");
+		} else book.append("Author: ");
+		
+		for(int i = 0; i < this.author.length; i++) {
+			book.append(author[i]);
+			if(author.length - 1 != i) {
+				book.append(", ");
+			} else book.append("\n");
+		}
+		
+		//date published
+		book.append("Published: " + date_published + "\n\n");
+		
+		//rating
+		book.append(rating.toString());
+		
+		return book.toString();
+		
+	}
 	
 }
