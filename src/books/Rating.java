@@ -1,7 +1,10 @@
 package books;
 
-public class Rating {
+import java.io.Serializable;
 
+public class Rating implements Serializable {
+
+	private static final long serialVersionUID = 1L; //Default serialVersion
 	int stars = 0;
 	String review;
 	static final int MAX_REVIEW_LENGTH = 150;
