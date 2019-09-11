@@ -45,8 +45,7 @@ public class Main {
 	
 	/**
 	 * Looks to see if the directory /book_logs has been created. If not, the directory is created
-	 * in the user's home directory.
-	 * @return true if the directory is created. Otherwise, return false.
+	 * in the user's home directory. Then does the same for sub-directory of current month/year.
 	 */
 	public static void make_dirs() {
 		
@@ -68,7 +67,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		/* create book_log directory for first-time user*/
+		/* create book_logs directory for first-time user*/
 		make_dirs();
 		
 		/*prompt user to enter new book, or search for previously logged book*/
@@ -82,6 +81,7 @@ public class Main {
 		log_book(book1);
 		log_book(book2);
 		
+		GUI.startUp();
 	}
 
 }
