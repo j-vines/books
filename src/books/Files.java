@@ -58,4 +58,6 @@ public class Files {
             System.out.println("ERROR: Book could not be logged...");
         }
     }
+	
+	//NEED METHODS TO REMOVE, DISPLAY, AND COUNT BOOKS.
 }
